@@ -1,0 +1,29 @@
+@url =http://localhost:3000
+
+GET {{url}}
+
+###
+
+POST {{url}}/register
+Content-Type: application/json
+
+{
+    "name": "Raman",
+    "email": "raman@yopmail.com",
+    "password": "12345678"
+}
+
+
+###
+
+POST {{url}}/login
+Content-Type: application/json
+
+{
+   "email": "raman@yopmail.com",
+   "password": "12345678"
+}
+
+###
+POST {{url}}/check-in/1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NzI1MDQxMzcsInVzZXJJZCI6MSwiaWF0IjoxNjcyNDc4OTM3fQ.dfs3Z6cQPkwEIcqH_ljbbqyBIXt20NrhvhY2E_u6cE8
