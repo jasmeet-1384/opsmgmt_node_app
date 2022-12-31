@@ -25,5 +25,9 @@ Content-Type: application/json
 }
 
 ###
-POST {{url}}/check-in/1
+GET {{url}}/check-in/status
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NzI1MDQxMzcsInVzZXJJZCI6MSwiaWF0IjoxNjcyNDc4OTM3fQ.dfs3Z6cQPkwEIcqH_ljbbqyBIXt20NrhvhY2E_u6cE8
+
+###
+POST {{url}}/check-in/2
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NzI1MDQxMzcsInVzZXJJZCI6MSwiaWF0IjoxNjcyNDc4OTM3fQ.dfs3Z6cQPkwEIcqH_ljbbqyBIXt20NrhvhY2E_u6cE8
