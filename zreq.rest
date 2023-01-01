@@ -31,3 +31,16 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NzI1MDQxM
 ###
 POST {{url}}/check-in/2
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NzI1MDQxMzcsInVzZXJJZCI6MSwiaWF0IjoxNjcyNDc4OTM3fQ.dfs3Z6cQPkwEIcqH_ljbbqyBIXt20NrhvhY2E_u6cE8
+
+###
+POST {{url}}/leaveForm
+Content-Type: application/json
+
+{
+    "date": "12-25-11",
+    "absence_from": "",
+    "absence_through": "",
+    "total_days": "",
+    "type_of_leave": "",
+    "reason_for_leave": "",
+}
