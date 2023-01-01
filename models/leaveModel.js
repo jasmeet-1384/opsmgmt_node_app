@@ -1,6 +1,6 @@
 import { Model, Sequelize } from "../database/sequelize.js";
 
-export  const leaveModel = Model.define("leave_details", {
+export  const LeaveModel = Model.define("leave_details", {
 
     user_id: Sequelize.STRING,
 
@@ -16,7 +16,12 @@ export  const leaveModel = Model.define("leave_details", {
 
     reason_for_leave: Sequelize.STRING,
 
+    status: {
+        type: Sequelize.STRING,
+        defaultValue: 'Pending'
+    },
+
 
 })
 
-await leaveModel.sync();
+await LeaveModel.sync();

@@ -18,6 +18,7 @@ async function register(req, res) {
   if (validation.fails()) {
     return res.json(failed(firstError(validation)));
   }
+
   let user_exists = await UserModel.findOne({
     where: {
       email: request.email,

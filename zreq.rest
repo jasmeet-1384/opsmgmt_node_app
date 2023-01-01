@@ -26,21 +26,21 @@ Content-Type: application/json
 
 ###
 GET {{url}}/check-in/status
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NzI1MDQxMzcsInVzZXJJZCI6MSwiaWF0IjoxNjcyNDc4OTM3fQ.dfs3Z6cQPkwEIcqH_ljbbqyBIXt20NrhvhY2E_u6cE8
-
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NzI1Nzg2NDYsInVzZXJJZCI6MSwiaWF0IjoxNjcyNTUzNDQ2fQ.rCfc_kc0LHJyW50DfUxXT9EZ9fEvXelfDp_oyfbHCkU
 ###
 POST {{url}}/check-in/2
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NzI1MDQxMzcsInVzZXJJZCI6MSwiaWF0IjoxNjcyNDc4OTM3fQ.dfs3Z6cQPkwEIcqH_ljbbqyBIXt20NrhvhY2E_u6cE8
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NzI1Nzg2NDYsInVzZXJJZCI6MSwiaWF0IjoxNjcyNTUzNDQ2fQ.rCfc_kc0LHJyW50DfUxXT9EZ9fEvXelfDp_oyfbHCkU
 
 ###
-POST {{url}}/leaveForm
+POST {{url}}/leave-form
 Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NzI1Nzg2NDYsInVzZXJJZCI6MSwiaWF0IjoxNjcyNTUzNDQ2fQ.rCfc_kc0LHJyW50DfUxXT9EZ9fEvXelfDp_oyfbHCkU
 
 {
     "date": "12-25-11",
-    "absence_from": "",
-    "absence_through": "",
-    "total_days": "",
-    "type_of_leave": "",
-    "reason_for_leave": "",
+    "absence_from": "12-02-23",
+    "absence_through": "10-4-2022",
+    "total_days": "4",
+    "type_of_leave": "medical",
+    "reason_for_leave": "medical emergancy"
 }

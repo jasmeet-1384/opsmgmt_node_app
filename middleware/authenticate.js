@@ -12,10 +12,13 @@ export async function authenticate(req,res,next){
     let headers = req.headers?.authorization || null;
 
     if(!headers){
-        console.log(headers);
+        return res.status(401).json({
+            "status_code": 401,
+            "message": "UnAuthenticated"
+          });
     }
 
-    let token = headers.split('Bearer ')[1];
+    let token = headers?.split('Bearer ')[1] ;
     
     try {
         let verified = jwt.verify(token, jwtSecretKey);

@@ -1,4 +1,4 @@
-import { failed, success } from "../utils/reply.js";
+import { failed, success, } from "../utils/reply.js";
 import { CheckInModel } from "../models/checkInModel.js";
 
 async function updateCheckIn(req, res) {
