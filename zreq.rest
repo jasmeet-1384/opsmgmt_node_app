@@ -8,8 +8,8 @@ POST {{url}}/register
 Content-Type: application/json
 
 {
-    "name": "Raman",
-    "email": "raman@yopmail.com",
+    "name": "sahil",
+    "email": "sahil@yopmail.com",
     "password": "12345678"
 }
 
@@ -20,27 +20,107 @@ POST {{url}}/login
 Content-Type: application/json
 
 {
-   "email": "raman@yopmail.com",
+   "email": "sahil@yopmail.com",
    "password": "12345678"
 }
 
 ###
 GET {{url}}/check-in/status
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NzI1Nzg2NDYsInVzZXJJZCI6MSwiaWF0IjoxNjcyNTUzNDQ2fQ.rCfc_kc0LHJyW50DfUxXT9EZ9fEvXelfDp_oyfbHCkU
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NzI2NzEzNDksInVzZXJJZCI6MiwiaWF0IjoxNjcyNjQ2MTQ5fQ.X8mw6yEqH1ZZAxZx6aZod2j_9P39YalB1ZTbKDFJ4IE
 ###
 POST {{url}}/check-in/2
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NzI1Nzg2NDYsInVzZXJJZCI6MSwiaWF0IjoxNjcyNTUzNDQ2fQ.rCfc_kc0LHJyW50DfUxXT9EZ9fEvXelfDp_oyfbHCkU
-
-###
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NzI2NzEzNDksInVzZXJJZCI6MiwiaWF0IjoxNjcyNjQ2MTQ5fQ.X8mw6yEqH1ZZAxZx6aZod2j_9P39YalB1ZTbKDFJ4IE
 POST {{url}}/leave-form
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NzI1Nzg2NDYsInVzZXJJZCI6MSwiaWF0IjoxNjcyNTUzNDQ2fQ.rCfc_kc0LHJyW50DfUxXT9EZ9fEvXelfDp_oyfbHCkU
-
-{
-    "date": "12-25-11",
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NzI2NzEzNDksInVzZXJJZCI6MiwiaWF0IjoxNjcyNjQ2MTQ5fQ.X8mw6yEqH1ZZAxZx6aZod2j_9P39YalB1ZTbKDFJ4IE
+   {
+     "date": "12-25-11",
     "absence_from": "12-02-23",
     "absence_through": "10-4-2022",
     "total_days": "4",
     "type_of_leave": "medical",
     "reason_for_leave": "medical emergancy"
+}
+
+
+###
+POST {{url}}/change_management
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NzI2NzEzNDksInVzZXJJZCI6MiwiaWF0IjoxNjcyNjQ2MTQ5fQ.X8mw6yEqH1ZZAxZx6aZod2j_9P39YalB1ZTbKDFJ4IE
+   {
+     "cr_no":"CRTTIT-001",
+    "date":"02.01.2023",
+    "project_name":"Techtweek Internal Project",
+    "cr_severity":"Minor",
+    "area_affected":"code",
+    "downtime":"4 hrs.",
+    "change_reqiured":"yes",
+    "intended_outcome":"error sloved",
+    "addtional_factor":"No",
+    "implementor":"Jasmeet"
+}
+
+
+###
+POST {{url}}/project_onboarding
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NzI2NzEzNDksInVzZXJJZCI6MiwiaWF0IjoxNjcyNjQ2MTQ5fQ.X8mw6yEqH1ZZAxZx6aZod2j_9P39YalB1ZTbKDFJ4IE
+
+{
+    "date":"01.02.2023",
+    "project_name":"Techtweek Internal Project",
+    "project_folder":"yes",
+    "time_tracker":"yes",
+    "kanban":"done",
+    "cloud_pem":"No",
+    "comments":"Work in progress"
+}
+
+
+###
+POST {{url}}/time_trackers
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NzI2NzEzNDksInVzZXJJZCI6MiwiaWF0IjoxNjcyNjQ2MTQ5fQ.X8mw6yEqH1ZZAxZx6aZod2j_9P39YalB1ZTbKDFJ4IE
+
+{
+    "date":"2023-01-02",
+    "project_name":"Techtweek Internal Project",
+    "start_time":"10:00am",
+    "finish_time":"19:00pm",
+    "duration":"7:00 hrs",
+    "note":"Today i have created api for kanban"
+}
+
+
+###
+POST {{url}}/kanban
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NzI2NzEzNDksInVzZXJJZCI6MiwiaWF0IjoxNjcyNjQ2MTQ5fQ.X8mw6yEqH1ZZAxZx6aZod2j_9P39YalB1ZTbKDFJ4IE
+
+{
+    "due_date":"2023-01-02",
+    "start_date":"2023-01-02",
+    "original_estimate":"",
+    "time_spent":"2 hrs",
+    "tittle":"Creating Api",
+    "description":"Today i have created api for kanban",
+    "assignee":"jasmeet"
+}
+
+
+###
+POST {{url}}/appraisal
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NzI2NzEzNDksInVzZXJJZCI6MiwiaWF0IjoxNjcyNjQ2MTQ5fQ.X8mw6yEqH1ZZAxZx6aZod2j_9P39YalB1ZTbKDFJ4IE
+
+{
+    "goals_appraisal":"yes",
+    "greatest_accomplishment":"project delivered on time",
+    "biggest_challenge":"working on new technology",
+    "biggest_strength_weakness":"continuous learning",
+    "resources":"udmey",
+    "career_goals":"working with top management",
+    "current_role":"Full stack developer",
+    "motivates":"my work",
+    "any_questions":"please implement gaming room in company"
 }
