@@ -25,8 +25,19 @@ if (validation.fails()) {
   return res.json(success("Kanban Data Saved Successfully", leave));
 }
 
+async function deletekanban(req, res){
+
+    let id = req.params.id;
+
+  let data = await KanbanModel.destroy({where: {id: id}})
+
+    return res.json(success("Data deleted successfully", data));
+
+}
+
 
 export default {
-kanban
+kanban,
+deletekanban,
 };
 

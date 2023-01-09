@@ -7,8 +7,6 @@ import changemanagementController from "./controllers/changemanagementController
 import projectonboardingController from "./controllers/projectonboardingController.js";
 import timetrackerController from "./controllers/timetrackerController.js";
 import kanbanController from "./controllers/kanbanController.js";
-import { AppraisalModel } from "./models/apprasialModel.js";
-import apprisalController from "./controllers/appraisalController.js";
 import appraisalController from "./controllers/appraisalController.js";
 
 let router  = express.Router();
@@ -24,4 +22,6 @@ router.post('/project_onboarding', authenticate, projectonboardingController.pro
 router.post('/time_trackers', authenticate, timetrackerController.timetrackers);
 router.post('/kanban', authenticate, kanbanController.kanban);
 router.post('/appraisal', authenticate, appraisalController.appraisal);
+router.post('/leave-update', authenticate, leaveController.updateleave);
+router.post('/delete', authenticate, kanbanController.deletekanban);
 export default router;

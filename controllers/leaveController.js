@@ -23,9 +23,37 @@ if (validation.fails()) {
 
   let leave = await LeaveModel.create(request);
 
-  return res.json(success("Leave Date Saved Successfully", leave));
+  return res.json(success("Leave Data Saved Successfully", leave));
 }
 
+async function updateleave(req,res){
+
+  let request=req.body;
+
+  let validation = new Validator(request,{
+    date: "required|date",
+    absence_from:"required|date",
+    absence_through:"required|date",
+    total_days:"required",
+    type_of_leave:"required",
+    reason_for_leave:"required",
+  });
+
+  if(validation.fails()){
+    return res.json(failed(firstError(validation)));
+  }
+
+  let id = req.params.id;
+  
+  let leaveupdate = await LeaveModel.findByPk(req.body, { where: { id: id}})
+
+  return res.json(success("Leave Data Updated Successfully", leaveupdate));
+
+
+}
+
+
 export default {
-leaveform
+leaveform,
+updateleave,
 };

@@ -26,13 +26,18 @@ Content-Type: application/json
 
 ###
 GET {{url}}/check-in/status
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NzI2NzEzNDksInVzZXJJZCI6MiwiaWF0IjoxNjcyNjQ2MTQ5fQ.X8mw6yEqH1ZZAxZx6aZod2j_9P39YalB1ZTbKDFJ4IE
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NzI3NzE4MjIsInVzZXJJZCI6MiwiaWF0IjoxNjcyNzQ2NjIyfQ.2Z1Qfu4H_JZJ461KFwKVcw4N4LIFCxHxxv12Wi6mLNw
 ###
 POST {{url}}/check-in/2
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NzI2NzEzNDksInVzZXJJZCI6MiwiaWF0IjoxNjcyNjQ2MTQ5fQ.X8mw6yEqH1ZZAxZx6aZod2j_9P39YalB1ZTbKDFJ4IE
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NzI3NzE4MjIsInVzZXJJZCI6MiwiaWF0IjoxNjcyNzQ2NjIyfQ.2Z1Qfu4H_JZJ461KFwKVcw4N4LIFCxHxxv12Wi6mLNw
+
+
+
+###
 POST {{url}}/leave-form
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NzI2NzEzNDksInVzZXJJZCI6MiwiaWF0IjoxNjcyNjQ2MTQ5fQ.X8mw6yEqH1ZZAxZx6aZod2j_9P39YalB1ZTbKDFJ4IE
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NzI3NzE4MjIsInVzZXJJZCI6MiwiaWF0IjoxNjcyNzQ2NjIyfQ.2Z1Qfu4H_JZJ461KFwKVcw4N4LIFCxHxxv12Wi6mLNw
+
    {
      "date": "12-25-11",
     "absence_from": "12-02-23",
@@ -46,7 +51,7 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NzI2NzEzN
 ###
 POST {{url}}/change_management
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NzI2NzEzNDksInVzZXJJZCI6MiwiaWF0IjoxNjcyNjQ2MTQ5fQ.X8mw6yEqH1ZZAxZx6aZod2j_9P39YalB1ZTbKDFJ4IE
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NzI3NzE4MjIsInVzZXJJZCI6MiwiaWF0IjoxNjcyNzQ2NjIyfQ.2Z1Qfu4H_JZJ461KFwKVcw4N4LIFCxHxxv12Wi6mLNw
    {
      "cr_no":"CRTTIT-001",
     "date":"02.01.2023",
@@ -64,7 +69,7 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NzI2NzEzN
 ###
 POST {{url}}/project_onboarding
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NzI2NzEzNDksInVzZXJJZCI6MiwiaWF0IjoxNjcyNjQ2MTQ5fQ.X8mw6yEqH1ZZAxZx6aZod2j_9P39YalB1ZTbKDFJ4IE
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NzI3NzE4MjIsInVzZXJJZCI6MiwiaWF0IjoxNjcyNzQ2NjIyfQ.2Z1Qfu4H_JZJ461KFwKVcw4N4LIFCxHxxv12Wi6mLNw
 
 {
     "date":"01.02.2023",
@@ -80,7 +85,7 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NzI2NzEzN
 ###
 POST {{url}}/time_trackers
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NzI2NzEzNDksInVzZXJJZCI6MiwiaWF0IjoxNjcyNjQ2MTQ5fQ.X8mw6yEqH1ZZAxZx6aZod2j_9P39YalB1ZTbKDFJ4IE
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NzI3NzE4MjIsInVzZXJJZCI6MiwiaWF0IjoxNjcyNzQ2NjIyfQ.2Z1Qfu4H_JZJ461KFwKVcw4N4LIFCxHxxv12Wi6mLNw
 
 {
     "date":"2023-01-02",
@@ -95,7 +100,7 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NzI2NzEzN
 ###
 POST {{url}}/kanban
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NzI2NzEzNDksInVzZXJJZCI6MiwiaWF0IjoxNjcyNjQ2MTQ5fQ.X8mw6yEqH1ZZAxZx6aZod2j_9P39YalB1ZTbKDFJ4IE
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NzI3NzE4MjIsInVzZXJJZCI6MiwiaWF0IjoxNjcyNzQ2NjIyfQ.2Z1Qfu4H_JZJ461KFwKVcw4N4LIFCxHxxv12Wi6mLNw
 
 {
     "due_date":"2023-01-02",
@@ -111,7 +116,7 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NzI2NzEzN
 ###
 POST {{url}}/appraisal
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NzI2NzEzNDksInVzZXJJZCI6MiwiaWF0IjoxNjcyNjQ2MTQ5fQ.X8mw6yEqH1ZZAxZx6aZod2j_9P39YalB1ZTbKDFJ4IE
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NzI3NzE4MjIsInVzZXJJZCI6MiwiaWF0IjoxNjcyNzQ2NjIyfQ.2Z1Qfu4H_JZJ461KFwKVcw4N4LIFCxHxxv12Wi6mLNw
 
 {
     "goals_appraisal":"yes",
@@ -124,3 +129,24 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NzI2NzEzN
     "motivates":"my work",
     "any_questions":"please implement gaming room in company"
 }
+
+
+###
+PUT {{url}}/leave-update
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NzI3NzE4MjIsInVzZXJJZCI6MiwiaWF0IjoxNjcyNzQ2NjIyfQ.2Z1Qfu4H_JZJ461KFwKVcw4N4LIFCxHxxv12Wi6mLNw
+
+   {
+     "date": "12-25-11",
+    "absence_from": "12-02-23",
+    "absence_through": "10-4-2022",
+    "total_days": "4",
+    "type_of_leave": "medical college",
+    "reason_for_leave": "medical emergancy due to accident" 
+}
+
+
+###
+POST {{url}}/delete
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NzI3NzE4MjIsInVzZXJJZCI6MiwiaWF0IjoxNjcyNzQ2NjIyfQ.2Z1Qfu4H_JZJ461KFwKVcw4N4LIFCxHxxv12Wi6mLNw
