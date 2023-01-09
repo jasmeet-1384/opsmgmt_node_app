@@ -22,6 +22,7 @@ export async function authenticate(req,res,next){
     
     try {
         let verified = jwt.verify(token, jwtSecretKey);
+        
 
         if(verified)
         {
