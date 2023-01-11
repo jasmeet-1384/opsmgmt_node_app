@@ -1,6 +1,6 @@
 import { Model , Sequelize } from '../database/sequelize.js'
 
-export const CheckInModel = Model.define("checkin_logs", {
+export const CheckInModel = Model.define("checkin_log", {
     
 
     user_id: Sequelize.STRING,
