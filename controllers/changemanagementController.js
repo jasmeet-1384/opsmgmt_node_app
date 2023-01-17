@@ -25,6 +25,9 @@ if (validation.fails()) {
     return res.json(failed(firstError(validation)));
   }
 
+  request['user_id'] = req.user.id;
+   console.log(request);
+
   let leave = await ChangeManagementModel.create(request);
 
   return res.json(success("Change Management Data Saved Successfully", leave));

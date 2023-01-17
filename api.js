@@ -16,7 +16,7 @@ router.post('/login' , authController.login);
 
 router.post('/check-in/:type' , authenticate, checkInController.updateCheckIn);
 router.get('/check-in/status' , authenticate, checkInController.getCheckInStatus);
-router.post('/leaveform', authenticate, leaveController.leaveform );
+router.post('/leave-form', authenticate, leaveController.leaveform );
 router.post('/change_management', authenticate, changemanagementController.changemanagement);
 router.post('/project_onboarding', authenticate, projectonboardingController.projectonboarding);
 router.post('/time_trackers', authenticate, timetrackerController.timetrackers);

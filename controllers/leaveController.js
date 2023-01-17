@@ -1,6 +1,7 @@
 import { LeaveModel } from "../models/leaveModel.js";
 import { failed, success, firstError } from "../utils/reply.js";
 import Validator from "validatorjs";
+import sendMail from "../mail/sendMail.js";
 
 //leave form
 
@@ -21,7 +22,11 @@ if (validation.fails()) {
     return res.json(failed(firstError(validation)));
   }
 
+   request['user_id'] = req.user.id;
+   console.log(request);
+
   let leave = await LeaveModel.create(request);
+  await sendMail.send("ashwinder@techtweekinfotech.com", "Leave Applied by " + req.user.name);
 
   return res.json(success("Leave Data Saved Successfully", leave));
 }

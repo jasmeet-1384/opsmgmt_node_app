@@ -4,6 +4,7 @@ import { failed, firstError, success } from "../utils/reply.js";
 import bcrypt from "bcrypt";
 import jwt from "jsonwebtoken";
 import _ from "lodash";
+import sendMail from "../mail/sendMail.js";
 
 // Register
 async function register(req, res) {
@@ -22,6 +23,7 @@ async function register(req, res) {
   let user_exists = await UserModel.findOne({
     where: {
       email: request.email,
+      name: request.name
     },
   });
 
@@ -34,6 +36,7 @@ async function register(req, res) {
   request.password = hashedPassword;
 
   let user = await UserModel.create(request);
+  await sendMail.send(request.email, `Dear ${request.name} Your Account Created Successfully! Your Account will be Activated within 24hrs. `)
 
   return res.json(success("User Register Successfully", user));
 }

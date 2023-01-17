@@ -22,6 +22,9 @@ if (validation.fails()) {
     return res.json(failed(firstError(validation)));
   }
 
+  request['user_id'] = req.user.id;
+  console.log(request);
+
   let leave = await ProjectOnboardingModel.create(request);
 
   return res.json(success("Project Onboarding Data Saved Successfully", leave));
