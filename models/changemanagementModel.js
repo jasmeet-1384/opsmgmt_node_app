@@ -4,7 +4,10 @@ export const ChangeManagementModel = Model.define("change_management", {
 
     user_id: Sequelize.STRING,
 
-    cr_no: Sequelize.STRING,
+    cr_no: {
+        type: Sequelize.STRING,
+        defaultValue: ''
+    },
 
     date: Sequelize.DATE,
 
@@ -28,7 +31,6 @@ export const ChangeManagementModel = Model.define("change_management", {
         type: Sequelize.STRING,
         defaultValue: 'Pending'
     },
-
 
 
 })

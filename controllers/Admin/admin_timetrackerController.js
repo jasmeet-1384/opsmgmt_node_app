@@ -1,5 +1,5 @@
-import { TimeTrackerModel } from "../models/timetrackerModel.js";
-import { failed, success, firstError } from "../utils/reply.js";
+import { TimeTrackerModel } from "../../models/timetrackerModel.js";
+import { failed, success, firstError } from "../../utils/reply.js";
 import Validator from "validatorjs";
 import moment  from "moment/moment.js";
 

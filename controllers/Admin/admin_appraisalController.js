@@ -1,5 +1,5 @@
-import { AppraisalModel } from "../models/apprasialModel.js";
-import { failed, success, firstError } from "../utils/reply.js";
+import { AppraisalModel } from "../../models/apprasialModel.js";
+import { failed, success, firstError } from "../../utils/reply.js";
 import Validator from "validatorjs";
 
 //Change management
@@ -47,9 +47,9 @@ async function getAppraisalData(req, res) {
 
 
   let userappraisal = await AppraisalModel.findAll({
-    where: {
-      user_id: req.user.id
-    },
+    // where: {
+    //   user_id: req.user.id
+    // },
     order: [["id", "desc"]]
   })
   return res.json(success("Appraisal Data Feteched Successfully!", userappraisal))

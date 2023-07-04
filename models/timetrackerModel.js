@@ -6,6 +6,8 @@ export const TimeTrackerModel = Model.define("time_trackers", {
 
     date: Sequelize.DATE,
 
+    project_name: Sequelize.STRING,
+
     start_time: Sequelize.STRING,
 
     finish_time: Sequelize.STRING,

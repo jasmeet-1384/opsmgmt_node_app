@@ -1,11 +1,11 @@
-import { UserModel } from "../models/userModel.js";
+import { UserModel } from "../../models/userModel.js";
 import Validator from "validatorjs";
-import { failed, firstError, success } from "../utils/reply.js";
+import { failed, firstError, success } from "../../utils/reply.js";
 import bcrypt from "bcrypt";
 import jwt from "jsonwebtoken";
 import _ from "lodash";
 
-import sendMail from "../mail/sendMail.js";
+import sendMail from "../../mail/sendMail.js";
 import { response } from "express";
 
 // Register

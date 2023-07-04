@@ -1,5 +1,5 @@
-import { ChangeManagementModel } from "../models/changemanagementModel.js";
-import { failed, success, firstError } from "../utils/reply.js";
+import { ChangeManagementModel } from "../../models/changemanagementModel.js";
+import { failed, success, firstError } from "../../utils/reply.js";
 import Validator from "validatorjs";
 
 //Change management

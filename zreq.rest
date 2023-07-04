@@ -2,6 +2,8 @@
 
 GET {{url}}
 
+
+//user register
 ###
 
 POST {{url}}/register
@@ -9,11 +11,11 @@ Content-Type: application/json
 
 {
     "name": "Jasmeet",
-    "email": "jasmeet2@yopmail.com",
+    "email": "jasmeet245@yopmail.com",
     "password": "12345678"
 }
 
-
+//user login
 ###
 
 POST {{url}}/login
@@ -24,6 +26,32 @@ Content-Type: application/json
    "password": "12345678"
 }
 
+
+//admin register
+###
+
+POST {{url}}/admin_register
+Content-Type: application/json
+
+{
+    "name": "Jasmeet",
+    "email": "jasmeet222@yopmail.com",
+    "password": "12345678"
+}
+
+
+//admin login
+###
+
+POST {{url}}/admin_login
+Content-Type: application/json
+
+{
+   "email": "jasmeet222@yopmail.com",
+   "password": "12345678"
+}
+
+//user check-in & check-out
 ###
 GET {{url}}/check-in/status
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NzMyNzE2MzMsInVzZXJJZCI6NSwiaWF0IjoxNjczMjQ2NDMzfQ.HRd9oY7Car7IURbPJVUkanYrx1Fp_bm3gzCN2Wp315g
@@ -32,11 +60,22 @@ POST {{url}}/check-in/2
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NzMyNzE2MzMsInVzZXJJZCI6NSwiaWF0IjoxNjczMjQ2NDMzfQ.HRd9oY7Car7IURbPJVUkanYrx1Fp_bm3gzCN2Wp315g
 
 
-
+//admin check-in & check-out
 ###
-POST {{url}}/leave-form
+GET {{url}}/admin_check-in/status
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NzY2MTg0NDcsInVzZXJJZCI6MjQsImlhdCI6MTY3NjAxMzY0N30.Pb2ZwArMtbzX_CXhTvWqqhkZ60wmMGRFTKKxK3opwtw
+###
+POST {{url}}/admin_check-in/1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NzY2MTg0NDcsInVzZXJJZCI6MjQsImlhdCI6MTY3NjAxMzY0N30.Pb2ZwArMtbzX_CXhTvWqqhkZ60wmMGRFTKKxK3opwtw
+
+
+
+
+//user leave form 
+###
+POST {{url}}/leave_form
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NzM5NjEwNzcsInVzZXJJZCI6NSwiaWF0IjoxNjczOTM1ODc3fQ.GsG5vBv_wKvxMmpmyb9b3vkSb0DYe6mOTbcsGa6ohWE
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NzY2MTg0NDcsInVzZXJJZCI6MjQsImlhdCI6MTY3NjAxMzY0N30.Pb2ZwArMtbzX_CXhTvWqqhkZ60wmMGRFTKKxK3opwtw
 
    {
      "date": "12-25-11",
@@ -48,6 +87,54 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NzM5NjEwN
 }
 
 
+/////admin leave form
+###
+POST {{url}}/admin_leave_form
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NzY2MTg0NDcsInVzZXJJZCI6MjQsImlhdCI6MTY3NjAxMzY0N30.Pb2ZwArMtbzX_CXhTvWqqhkZ60wmMGRFTKKxK3opwtw
+
+   {
+     "date": "12-25-11",
+    "absence_from": "12-02-23",
+    "absence_through": "10-4-2022",
+    "total_days": "4",
+    "type_of_leave": "medical",
+    "reason_for_leave": "medical emergancy"
+}
+
+
+###
+POST {{url}}/leave-update
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NzQwNzExMDIsInVzZXJJZCI6NSwiaWF0IjoxNjc0MDQ1OTAyfQ.ukYgOJWi-9x9QKg5a40YDnwbfWWzAS8HJHDd6K9bn4s
+
+   {
+     "date": "12-25-11",
+    "absence_from": "12-02-23",
+    "absence_through": "10-4-2022",
+    "total_days": "4",
+    "type_of_leave": "medical college",
+    "reason_for_leave": "medical emergancy due to accident" 
+}
+
+
+//user leave list
+###
+GET {{url}}/leave-list
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NzY2MTc1NDAsInVzZXJJZCI6MjQsImlhdCI6MTY3NjAxMjc0MH0.8cOlSBF5PTrpLsSsqO8J4xow7tOUxwEysiN7jnC4i1o
+
+
+//user leave list
+###
+GET {{url}}/admin_leave-list
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NzY2MTg0NDcsInVzZXJJZCI6MjQsImlhdCI6MTY3NjAxMzY0N30.Pb2ZwArMtbzX_CXhTvWqqhkZ60wmMGRFTKKxK3opwtw
+
+
+
+
+//user changemanagement
 ###
 POST {{url}}/change_management
 Content-Type: application/json
@@ -66,7 +153,37 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NzM1MzAyM
     "implementor":"Jasmeet"
 }
 
+//admin changemanagement
 
+###
+POST {{url}}/change_management
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NzY2MTg0NDcsInVzZXJJZCI6MjQsImlhdCI6MTY3NjAxMzY0N30.Pb2ZwArMtbzX_CXhTvWqqhkZ60wmMGRFTKKxK3opwtw
+
+   {
+     "cr_no":"CRTTIT-002",
+    "date":"02.01.2023",
+    "project_name":"Techtweek Internal Project",
+    "cr_severity":"Minor",
+    "area_affected":"code",
+    "downtime":"4 hrs.",
+    "change_reqiured":"yes",
+    "intended_outcome":"error sloved",
+    "addtional_factor":"No",
+    "implementor":"Jasmeet"
+}
+
+
+
+###
+GET {{url}}/changemanagement-list
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NzQwNDUyNzUsInVzZXJJZCI6NSwiaWF0IjoxNjc0MDIwMDc1fQ.7fZEiBpOiIKphESuJcqWH574S7a4sJkOigNtrICyybc
+
+
+
+
+//user projectonboarding
 ###
 POST {{url}}/project_onboarding
 Content-Type: application/json
@@ -82,11 +199,36 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NzMyNzE2M
     "comments":"Work in progress"
 }
 
+//admin projectonboarding
+###
+POST {{url}}/admin_project_onboarding
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NzY2MTg0NDcsInVzZXJJZCI6MjQsImlhdCI6MTY3NjAxMzY0N30.Pb2ZwArMtbzX_CXhTvWqqhkZ60wmMGRFTKKxK3opwtw
 
+{
+    "date":"01.02.2023",
+    "project_name":"Techtweek Internal Project",
+    "project_folder":"yes",
+    "time_tracker":"yes",
+    "kanban":"done",
+    "cloud_pem":"No",
+    "comments":"Work in progress"
+}
+
+
+
+###
+GET {{url}}/projectonboarding-list
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NzQxNDUzODYsInVzZXJJZCI6NSwiaWF0IjoxNjc0MTIwMTg2fQ.68VlpBb25uMvWBIl6fyzyiqFRYa0iPrUwKZC9suSy58
+
+
+
+//user time tracker
 ###
 POST {{url}}/time_trackers
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NzMyNzE2MzMsInVzZXJJZCI6NSwiaWF0IjoxNjczMjQ2NDMzfQ.HRd9oY7Car7IURbPJVUkanYrx1Fp_bm3gzCN2Wp315g
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NzQxNDU2MTYsInVzZXJJZCI6NSwiaWF0IjoxNjc0MTIwNDE2fQ.7qGv80q6ozPEbNkBKTUimBmAdJn8eOjdWULSfiQu71w
 
 {
     "date":"2023-01-02",
@@ -98,21 +240,56 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NzMyNzE2M
 }
 
 
+//admin time tracker
+
+###
+POST {{url}}/admin_timetracker
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NzY2MTg0NDcsInVzZXJJZCI6MjQsImlhdCI6MTY3NjAxMzY0N30.Pb2ZwArMtbzX_CXhTvWqqhkZ60wmMGRFTKKxK3opwtw
+
+{
+    "date":"2023-01-02",
+    "project_name":"Techtweek Internal Project",
+    "start_time":"10:00am",
+    "finish_time":"19:00pm",
+    "duration":"7:00 hrs",
+    "note":"Today i have created api for kanban"
+}
+
+
+
+###
+GET {{url}}/timetracker-list
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NzQxNDU2MTYsInVzZXJJZCI6NSwiaWF0IjoxNjc0MTIwNDE2fQ.7qGv80q6ozPEbNkBKTUimBmAdJn8eOjdWULSfiQu71w
+
+
+
+
 ###
 POST {{url}}/kanban
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NzMyNzE2MzMsInVzZXJJZCI6NSwiaWF0IjoxNjczMjQ2NDMzfQ.HRd9oY7Car7IURbPJVUkanYrx1Fp_bm3gzCN2Wp315g
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NzQyMjUwMTAsInVzZXJJZCI6NSwiaWF0IjoxNjc0MTk5ODEwfQ.qmxaxdNKdXdHDt-K4x41CB2fQEmZYCQ3PjAGGNmXst8
 
 {
-    "due_date":"2023-01-02",
-    "start_date":"2023-01-02",
-    "original_estimate":"",
-    "time_spent":"2 hrs",
-    "tittle":"Creating Api",
+    "title":"Creating Api",
     "description":"Today i have created api for kanban",
-    "assignee":"jasmeet"
+    "start_date":"2023-01-02",
+    "due_date":"2023-01-02",
+    "original_estimate":"2 days",
+    "time_spent":"2 hrs",
+    "assignee":["3"],
+    "status":"todo",
+    "priority":"low"
 }
 
+###
+GET {{url}}/kanban-list
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NzQ0NzkzNTgsInVzZXJJZCI6NSwiaWF0IjoxNjc0NDU0MTU4fQ.9LRckwNVg46FjJbbsFDjeWN0_Xc3hVJgqSqQaDO6alo
+
+
+//user appraisal
 
 ###
 POST {{url}}/appraisal
@@ -131,23 +308,67 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NzMyNzE2M
     "any_questions":"please implement gaming room in company"
 }
 
+//admin appraisal
 
 ###
-PUT {{url}}/leave-update
+POST {{url}}/appraisal
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NzMyNzE2MzMsInVzZXJJZCI6NSwiaWF0IjoxNjczMjQ2NDMzfQ.HRd9oY7Car7IURbPJVUkanYrx1Fp_bm3gzCN2Wp315g
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NzY2MTg0NDcsInVzZXJJZCI6MjQsImlhdCI6MTY3NjAxMzY0N30.Pb2ZwArMtbzX_CXhTvWqqhkZ60wmMGRFTKKxK3opwtw
 
-   {
-     "date": "12-25-11",
-    "absence_from": "12-02-23",
-    "absence_through": "10-4-2022",
-    "total_days": "4",
-    "type_of_leave": "medical college",
-    "reason_for_leave": "medical emergancy due to accident" 
+{
+    "goals_appraisal":"yes",
+    "greatest_accomplishment":"project delivered on time",
+    "biggest_challenge":"working on new technology",
+    "biggest_strength_weakness":"continuous learning",
+    "resources":"udmey",
+    "career_goals":"working with top management",
+    "current_role":"Full stack developer",
+    "motivates":"my work",
+    "any_questions":"please implement gaming room in company"
 }
+
+
+###
+GET {{url}}/appraisal-list
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NzY2MTg0NDcsInVzZXJJZCI6MjQsImlhdCI6MTY3NjAxMzY0N30.Pb2ZwArMtbzX_CXhTvWqqhkZ60wmMGRFTKKxK3opwtw
+
+
+//admin appraisal list
+
+###
+GET {{url}}/admin_appraisal-list
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NzY2MTg0NDcsInVzZXJJZCI6MjQsImlhdCI6MTY3NjAxMzY0N30.Pb2ZwArMtbzX_CXhTvWqqhkZ60wmMGRFTKKxK3opwtw
+
+
 
 
 ###
 POST {{url}}/delete
 Content-Type: application/json
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NzMyNzE2MzMsInVzZXJJZCI6NSwiaWF0IjoxNjczMjQ2NDMzfQ.HRd9oY7Car7IURbPJVUkanYrx1Fp_bm3gzCN2Wp315g
+
+
+###
+
+GET {{url}}/kanban-list
+Authorization: {{ token }}
+
+###
+
+
+PUT {{url}}/kanban-update
+Authorization: {{ token }}
+Content-Type: application/json
+
+{
+    "task_id": 1,
+    "status":"completed",
+    "position_id": 0
+}
+
+
+###
+
+GET {{url}}/user-list

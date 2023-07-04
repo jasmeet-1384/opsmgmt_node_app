@@ -1,5 +1,5 @@
-import { ProjectOnboardingModel } from "../models/projectonboardingModel.js";
-import { failed, success, firstError } from "../utils/reply.js";
+import { ProjectOnboardingModel } from "../../models/projectonboardingModel.js";
+import { failed, success, firstError } from "../../utils/reply.js";
 import Validator from "validatorjs";
 
 //Project Onboarding

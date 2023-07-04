@@ -1,7 +1,7 @@
-import { LeaveModel } from "../models/leaveModel.js";
-import { failed, success, firstError } from "../utils/reply.js";
+import { LeaveModel } from "../../models/leaveModel.js";
+import { failed, success, firstError } from "../../utils/reply.js";
 import Validator from "validatorjs";
-import sendMail from "../mail/sendMail.js";
+import sendMail from "../../mail/sendMail.js";
 import moment  from "moment/moment.js";
 //leave form
 
@@ -75,9 +75,9 @@ async function getleavedata(req, res) {
   }
 
   let userleaves = await LeaveModel.findAll({
-    where: {
-      user_id: req.user.id,
-    },
+    // where: {
+    //   user_id: req.user.id,
+    // },
     order: [["id", "desc"]]
   });
   return res.json(success("Data fetch Successfully!", userleaves));

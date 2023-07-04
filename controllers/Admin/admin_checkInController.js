@@ -1,5 +1,5 @@
-import { failed, success } from "../utils/reply.js";
-import { CheckInModel } from "../models/checkInModel.js";
+import { failed, success } from "../../utils/reply.js";
+import { CheckInModel } from "../../models/checkInModel.js";
 import fetch from "node-fetch";
 
 const regexExp =

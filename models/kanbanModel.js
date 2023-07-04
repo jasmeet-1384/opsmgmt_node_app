@@ -4,30 +4,31 @@ export const KanbanModel = Model.define("kanbans", {
 
     user_id: Sequelize.STRING,
 
-    due_date: Sequelize.DATE,
+    title: Sequelize.STRING,
+
+    description: Sequelize.STRING,
 
     start_date: Sequelize.DATE,
+
+    due_date: Sequelize.DATE,
 
     original_estimate: Sequelize.STRING,
 
     time_spent: Sequelize.STRING,
 
-    tittle: Sequelize.STRING,
-
-    description: Sequelize.STRING,
-
     assignee: Sequelize.STRING,
 
-    column: {
-        type: Sequelize.STRING,
-        defaultValue: "Assigned-Task"
-    },
+    status: Sequelize.STRING,
     
-    priority: {
-        type: Sequelize.STRING,
-        defaultValue: "0"
-    },
+    priority: Sequelize.STRING, // high , medium, low
 
+    position_id: Sequelize.STRING,
+
+    is_deleted: {
+        type: Sequelize.BOOLEAN,
+        defaultValue: 0
+    },
+        
 
 })
 

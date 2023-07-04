@@ -4,7 +4,7 @@ import Validator from "validatorjs";
 import _ from 'lodash';
 import { UserModel } from "../models/userModel.js";
 
-//Change management
+//kanban
 
 async function kanban(req, res) {
   let request = req.body;
