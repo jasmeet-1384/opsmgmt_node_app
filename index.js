@@ -26,7 +26,7 @@ app.use(express.json());
 
 
 app.get('/', (req,res) => {
-    return res.json(success('Working', {hello : 'value'}))
+    return res.json(success('Working', {hello : 'Opsmgmt'}))
 });
 
 app.use(router);
